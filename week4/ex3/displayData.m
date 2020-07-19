@@ -48,12 +48,23 @@ for j = 1:display_rows
 	end
 end
 
-% Display Image
+fprintf('display_array size is ...');
+disp(size(display_array))
+
+%% for save figure
+%subplot(1, 2, 1);
+% Display Image (colormap limit = [-1, 1])
 h = imagesc(display_array, [-1 1]);
 
 % Do not show axis
 axis image off
 
+%% for save figure
+%subplot(1, 2, 2);
+%plot([1,2,3,4], [4,6, 2,7]);
+%print display.png
+
 drawnow;
+
 
 end
